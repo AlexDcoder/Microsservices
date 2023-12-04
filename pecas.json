@@ -1,0 +1,602 @@
+[
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "Baixa",
+    "preco": 419.41,
+    "quantidade_em_estoque": 65
+  },
+  {
+    "nome": "Cooler",
+    "qualidade": "Baixa",
+    "preco": 679.59,
+    "quantidade_em_estoque": 37
+  },
+  {
+    "nome": "Gabinete",
+    "qualidade": "Baixa",
+    "preco": 286.34,
+    "quantidade_em_estoque": 53
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "M\u00e9dia",
+    "preco": 473.55,
+    "quantidade_em_estoque": 54
+  },
+  {
+    "nome": "HD",
+    "qualidade": "M\u00e9dia",
+    "preco": 1816.97,
+    "quantidade_em_estoque": 69
+  },
+  {
+    "nome": "SSD",
+    "qualidade": "Baixa",
+    "preco": 1279.24,
+    "quantidade_em_estoque": 54
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Alta",
+    "preco": 1202.3,
+    "quantidade_em_estoque": 88
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Alta",
+    "preco": 215.41,
+    "quantidade_em_estoque": 10
+  },
+  {
+    "nome": "SSD",
+    "qualidade": "Alta",
+    "preco": 480.29,
+    "quantidade_em_estoque": 5
+  },
+  {
+    "nome": "HD",
+    "qualidade": "M\u00e9dia",
+    "preco": 788.35,
+    "quantidade_em_estoque": 98
+  },
+  {
+    "nome": "Cooler",
+    "qualidade": "Baixa",
+    "preco": 1188.86,
+    "quantidade_em_estoque": 11
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Alta",
+    "preco": 785.83,
+    "quantidade_em_estoque": 88
+  },
+  {
+    "nome": "HD",
+    "qualidade": "M\u00e9dia",
+    "preco": 973.05,
+    "quantidade_em_estoque": 56
+  },
+  {
+    "nome": "CPU",
+    "qualidade": "M\u00e9dia",
+    "preco": 736.31,
+    "quantidade_em_estoque": 68
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "M\u00e9dia",
+    "preco": 1693.06,
+    "quantidade_em_estoque": 7
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Baixa",
+    "preco": 1442.21,
+    "quantidade_em_estoque": 41
+  },
+  {
+    "nome": "Gabinete",
+    "qualidade": "M\u00e9dia",
+    "preco": 1965.8,
+    "quantidade_em_estoque": 90
+  },
+  {
+    "nome": "Fonte",
+    "qualidade": "Alta",
+    "preco": 1524.37,
+    "quantidade_em_estoque": 64
+  },
+  {
+    "nome": "HD",
+    "qualidade": "M\u00e9dia",
+    "preco": 362.85,
+    "quantidade_em_estoque": 64
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "M\u00e9dia",
+    "preco": 199.23,
+    "quantidade_em_estoque": 16
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "M\u00e9dia",
+    "preco": 1637.11,
+    "quantidade_em_estoque": 61
+  },
+  {
+    "nome": "Gabinete",
+    "qualidade": "Alta",
+    "preco": 504.38,
+    "quantidade_em_estoque": 55
+  },
+  {
+    "nome": "Fonte",
+    "qualidade": "Alta",
+    "preco": 835.36,
+    "quantidade_em_estoque": 96
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "Alta",
+    "preco": 1923.01,
+    "quantidade_em_estoque": 32
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "Baixa",
+    "preco": 600.8,
+    "quantidade_em_estoque": 17
+  },
+  {
+    "nome": "CPU",
+    "qualidade": "M\u00e9dia",
+    "preco": 589.76,
+    "quantidade_em_estoque": 38
+  },
+  {
+    "nome": "HD",
+    "qualidade": "M\u00e9dia",
+    "preco": 1947.88,
+    "quantidade_em_estoque": 72
+  },
+  {
+    "nome": "Gabinete",
+    "qualidade": "Alta",
+    "preco": 899.07,
+    "quantidade_em_estoque": 19
+  },
+  {
+    "nome": "Cooler",
+    "qualidade": "M\u00e9dia",
+    "preco": 1679.07,
+    "quantidade_em_estoque": 21
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "Baixa",
+    "preco": 1765.58,
+    "quantidade_em_estoque": 73
+  },
+  {
+    "nome": "Fonte",
+    "qualidade": "M\u00e9dia",
+    "preco": 1882.04,
+    "quantidade_em_estoque": 73
+  },
+  {
+    "nome": "CPU",
+    "qualidade": "Baixa",
+    "preco": 288.84,
+    "quantidade_em_estoque": 26
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Alta",
+    "preco": 670.6,
+    "quantidade_em_estoque": 46
+  },
+  {
+    "nome": "CPU",
+    "qualidade": "M\u00e9dia",
+    "preco": 1810.59,
+    "quantidade_em_estoque": 64
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "M\u00e9dia",
+    "preco": 1413.93,
+    "quantidade_em_estoque": 60
+  },
+  {
+    "nome": "SSD",
+    "qualidade": "Baixa",
+    "preco": 1067.24,
+    "quantidade_em_estoque": 100
+  },
+  {
+    "nome": "Fonte",
+    "qualidade": "Baixa",
+    "preco": 809.55,
+    "quantidade_em_estoque": 15
+  },
+  {
+    "nome": "Cooler",
+    "qualidade": "Alta",
+    "preco": 1275.41,
+    "quantidade_em_estoque": 83
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "Baixa",
+    "preco": 1180.69,
+    "quantidade_em_estoque": 81
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "Baixa",
+    "preco": 718.73,
+    "quantidade_em_estoque": 73
+  },
+  {
+    "nome": "Gabinete",
+    "qualidade": "Alta",
+    "preco": 1312.53,
+    "quantidade_em_estoque": 14
+  },
+  {
+    "nome": "Cooler",
+    "qualidade": "Alta",
+    "preco": 1825.37,
+    "quantidade_em_estoque": 79
+  },
+  {
+    "nome": "CPU",
+    "qualidade": "Alta",
+    "preco": 1726.54,
+    "quantidade_em_estoque": 48
+  },
+  {
+    "nome": "Cooler",
+    "qualidade": "Alta",
+    "preco": 1369.59,
+    "quantidade_em_estoque": 88
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Alta",
+    "preco": 521.5,
+    "quantidade_em_estoque": 59
+  },
+  {
+    "nome": "SSD",
+    "qualidade": "M\u00e9dia",
+    "preco": 288.45,
+    "quantidade_em_estoque": 64
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "Baixa",
+    "preco": 1080.31,
+    "quantidade_em_estoque": 98
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Alta",
+    "preco": 1129.74,
+    "quantidade_em_estoque": 60
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Baixa",
+    "preco": 1605.91,
+    "quantidade_em_estoque": 91
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Baixa",
+    "preco": 921.08,
+    "quantidade_em_estoque": 46
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "Alta",
+    "preco": 1732.29,
+    "quantidade_em_estoque": 13
+  },
+  {
+    "nome": "Cooler",
+    "qualidade": "Baixa",
+    "preco": 317.72,
+    "quantidade_em_estoque": 85
+  },
+  {
+    "nome": "SSD",
+    "qualidade": "Baixa",
+    "preco": 1191.12,
+    "quantidade_em_estoque": 73
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Baixa",
+    "preco": 1134.51,
+    "quantidade_em_estoque": 79
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Alta",
+    "preco": 1338.67,
+    "quantidade_em_estoque": 95
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "Alta",
+    "preco": 804.07,
+    "quantidade_em_estoque": 1
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "M\u00e9dia",
+    "preco": 472.13,
+    "quantidade_em_estoque": 50
+  },
+  {
+    "nome": "SSD",
+    "qualidade": "M\u00e9dia",
+    "preco": 947.25,
+    "quantidade_em_estoque": 21
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "Alta",
+    "preco": 1171.77,
+    "quantidade_em_estoque": 51
+  },
+  {
+    "nome": "Gabinete",
+    "qualidade": "Baixa",
+    "preco": 1698.66,
+    "quantidade_em_estoque": 48
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Baixa",
+    "preco": 1504.53,
+    "quantidade_em_estoque": 68
+  },
+  {
+    "nome": "Fonte",
+    "qualidade": "Alta",
+    "preco": 529.26,
+    "quantidade_em_estoque": 34
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Alta",
+    "preco": 779.81,
+    "quantidade_em_estoque": 16
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Baixa",
+    "preco": 1557.79,
+    "quantidade_em_estoque": 16
+  },
+  {
+    "nome": "Cooler",
+    "qualidade": "Baixa",
+    "preco": 340.93,
+    "quantidade_em_estoque": 44
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "M\u00e9dia",
+    "preco": 731.03,
+    "quantidade_em_estoque": 3
+  },
+  {
+    "nome": "Gabinete",
+    "qualidade": "Baixa",
+    "preco": 326.1,
+    "quantidade_em_estoque": 1
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "Alta",
+    "preco": 907.78,
+    "quantidade_em_estoque": 70
+  },
+  {
+    "nome": "Fonte",
+    "qualidade": "M\u00e9dia",
+    "preco": 653.09,
+    "quantidade_em_estoque": 39
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "M\u00e9dia",
+    "preco": 682.04,
+    "quantidade_em_estoque": 2
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "M\u00e9dia",
+    "preco": 1096.64,
+    "quantidade_em_estoque": 1
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Baixa",
+    "preco": 1168.34,
+    "quantidade_em_estoque": 68
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "Baixa",
+    "preco": 271.37,
+    "quantidade_em_estoque": 21
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Alta",
+    "preco": 1581.58,
+    "quantidade_em_estoque": 92
+  },
+  {
+    "nome": "Gabinete",
+    "qualidade": "M\u00e9dia",
+    "preco": 1662.52,
+    "quantidade_em_estoque": 27
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "M\u00e9dia",
+    "preco": 1878.48,
+    "quantidade_em_estoque": 59
+  },
+  {
+    "nome": "CPU",
+    "qualidade": "M\u00e9dia",
+    "preco": 1529.75,
+    "quantidade_em_estoque": 75
+  },
+  {
+    "nome": "Cooler",
+    "qualidade": "Baixa",
+    "preco": 1604.6,
+    "quantidade_em_estoque": 29
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Baixa",
+    "preco": 653.32,
+    "quantidade_em_estoque": 33
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "Alta",
+    "preco": 1738.74,
+    "quantidade_em_estoque": 56
+  },
+  {
+    "nome": "HD",
+    "qualidade": "M\u00e9dia",
+    "preco": 1349.05,
+    "quantidade_em_estoque": 52
+  },
+  {
+    "nome": "SSD",
+    "qualidade": "M\u00e9dia",
+    "preco": 1559.68,
+    "quantidade_em_estoque": 33
+  },
+  {
+    "nome": "SSD",
+    "qualidade": "M\u00e9dia",
+    "preco": 497.66,
+    "quantidade_em_estoque": 95
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Baixa",
+    "preco": 1027.5,
+    "quantidade_em_estoque": 99
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "Baixa",
+    "preco": 1732.88,
+    "quantidade_em_estoque": 97
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "M\u00e9dia",
+    "preco": 1955.88,
+    "quantidade_em_estoque": 5
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "Alta",
+    "preco": 1070.55,
+    "quantidade_em_estoque": 7
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "Baixa",
+    "preco": 1966.25,
+    "quantidade_em_estoque": 83
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Alta",
+    "preco": 982.15,
+    "quantidade_em_estoque": 79
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "M\u00e9dia",
+    "preco": 1229.51,
+    "quantidade_em_estoque": 95
+  },
+  {
+    "nome": "Cooler",
+    "qualidade": "Alta",
+    "preco": 209.43,
+    "quantidade_em_estoque": 50
+  },
+  {
+    "nome": "CPU",
+    "qualidade": "Baixa",
+    "preco": 1867.85,
+    "quantidade_em_estoque": 13
+  },
+  {
+    "nome": "HD",
+    "qualidade": "Alta",
+    "preco": 1740.44,
+    "quantidade_em_estoque": 61
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Alta",
+    "preco": 1910.72,
+    "quantidade_em_estoque": 35
+  },
+  {
+    "nome": "Mem\u00f3ria RAM",
+    "qualidade": "Baixa",
+    "preco": 1883.07,
+    "quantidade_em_estoque": 99
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "Baixa",
+    "preco": 1518.2,
+    "quantidade_em_estoque": 80
+  },
+  {
+    "nome": "Placa de V\u00eddeo",
+    "qualidade": "M\u00e9dia",
+    "preco": 1457.94,
+    "quantidade_em_estoque": 67
+  },
+  {
+    "nome": "SSD",
+    "qualidade": "Baixa",
+    "preco": 700.43,
+    "quantidade_em_estoque": 62
+  },
+  {
+    "nome": "Fonte",
+    "qualidade": "M\u00e9dia",
+    "preco": 1298.06,
+    "quantidade_em_estoque": 31
+  },
+  {
+    "nome": "Placa M\u00e3e",
+    "qualidade": "Alta",
+    "preco": 417.33,
+    "quantidade_em_estoque": 34
+  }
+]
