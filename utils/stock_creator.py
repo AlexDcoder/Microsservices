@@ -1,8 +1,9 @@
 import json
 import random
+from uuid import uuid4
 
 
-def gerar_json_pecas_aleatorias(num_pecas=100):
+def generate_products(num_pecas=5):
     pecas = []
 
     for _ in range(num_pecas):
@@ -11,9 +12,10 @@ def gerar_json_pecas_aleatorias(num_pecas=100):
              "Placa Mãe", "Gabinete", "Cooler", "Fonte"])
         qualidade = random.choice(["Baixa", "Média", "Alta"])
         preco = round(random.uniform(100, 2000), 2)
-        quantidade_em_estoque = random.randint(1, 100)
+        quantidade_em_estoque = random.randint(0, 10)
 
         peca = {
+            "id": str(uuid4()),
             "nome": nome,
             "qualidade": qualidade,
             "preco": preco,
@@ -27,4 +29,4 @@ def gerar_json_pecas_aleatorias(num_pecas=100):
 
 
 # Gerando e salvando o JSON em um arquivo
-gerar_json_pecas_aleatorias()
+generate_products()

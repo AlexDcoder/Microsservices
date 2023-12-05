@@ -8,12 +8,19 @@ def generate_random_string(length):
     return ''.join(random.choice(letters) for _ in range(length))
 
 
+def generate_random_password(length=12):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choices(characters, k=length))
+    return password
+
+
 def generate_user():
     user = {
-        "nome": generate_random_string(8),
+        "nome": generate_random_string(random.randint(5, 8)),
         "email": f"{generate_random_string(8)}@example.com",
         "idade": random.randint(18, 60),
         "ativo": random.choice([True, False]),
+        "password": f"{generate_random_password(random.randint(5, 8))}",
         "saldo": round(random.uniform(100.0, 1000.0), 2)
     }
     return user
@@ -29,7 +36,6 @@ def save_to_json(users, filename):
         json.dump(users, file, indent=2, ensure_ascii=False)
 
 
-# Gerar 5 usuÃ¡rios e salvar no arquivo "usuarios.json"
-num_users = 100
-usuarios_data = generate_users(num_users)
+NUM_USERS = 5
+usuarios_data = generate_users(NUM_USERS)
 save_to_json(usuarios_data, 'usuarios.json')
