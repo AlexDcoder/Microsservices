@@ -1,8 +1,11 @@
+from itertools import product
 import time
 from flask import Flask, request, jsonify, request
 import json
 import requests
 import validate_credentials
+import asyncio
+
 
 app = Flask(__name__)
 data_users = []
@@ -11,17 +14,24 @@ with open('usuarios.json', encoding='utf-8') as users_files:
     data_users = json.load(users_files)
 
 
-@app.route('/user/<string:name>', methods=['GET'])
-def initial_page(name):
+@app.route('/user', methods=['GET'])
+def initial_page():
 
     return f'''
     Digite na url:
-        '/validate_user' => Para validar usuário {name}
+        'um nome de usuário/validate_user' => Para validar usuário com tal nome
         '/product' => Para ver lista de produtos
         '/product/detail/id do produto' => Para ver detalhes de um produto
+
         '/carrinho' => Para ver carrinho
-        '/carrinho/product/<string:id>' => Para ver detalhes de um produto de um carrinho
-        '/iniciar/pagamento' => Para ver detalhes de um produto de um carrinho
+        '/carrinho/product/id' => Para ver detalhes de um produto de um carrinho
+        '/carrinho/carrinho/add/id' => Para adicionar um produto de um carrinho
+        '/carrinho/carrinho/rem/id' => Para remover um produto de um carrinho
+
+        '/pedido/' => Para ver os pedidos
+        '/pedido/add' => Para adicionar carrinho aos pedidos
+
+        '/iniciar/pagamento' => Para iniciar um pagamento
     '''
 
 # DONE
@@ -36,33 +46,118 @@ def validate_user(name):
 # TODO
 
 
-@app.route('/user/<string:name>/product', methods=['GET'])
-def see_product(name):
-    pass
+@app.route('/user/product', methods=['GET'])
+def see_product():
+    try:
+
+        response = requests.get('http://localhost:2000/products', timeout=5)
+        response.raise_for_status()
+        product_list = response.json()
+        return jsonify(product_list)
+
+    except requests.Timeout:
+        return jsonify({"error": "Request to the target API timed out"}), 500
+    except requests.RequestException as e:
+        return jsonify({"error": f"Request to the target API failed. {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # TODO
 
 
-@app.route('/user/<string:name>/product/detail/<string:id>', methods=['POST'])
-def see_product_detail(name, id):
+@app.route('/user/product/detail/<string:id>', methods=['POST'])
+def see_product_detail(id):
+    try:
+        response = requests.get(f'http://localhost:2000/products/{id}')
+        response.raise_for_status()
+        product_detail = response.json()
+        return jsonify(product_detail)
+
+    except requests.Timeout:
+        return jsonify({"error": "Request to the target API timed out"}), 500
+    except requests.RequestException as e:
+        return jsonify({"error": f"Request to the target API failed. {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+# TODO
+
+
+@app.route('/user/carrinho', methods=['GET'])
+def see_cart():
+    try:
+
+        response = requests.get(f'http://localhost:5000/carrinho')
+        response.raise_for_status()
+        cart = response.json()
+        return jsonify(cart)
+
+    except requests.Timeout:
+        return jsonify({"error": "Request to the target API timed out"}), 500
+    except requests.RequestException as e:
+        return jsonify({"error": f"Request to the target API failed. {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/user/carrinho/product/<string:id>', methods=['GET'])
+def see_cart_product_detail(id):
     pass
 
 
-@app.route('/user/<string:name>/carrinho', methods=['GET'])
-def see_cart(name):
-    pass
+@app.route('/user/carrinho/add/<string:id>', methods=['GET'])
+def add_to_cart(id):
+    try:
+
+        response = requests.get(
+            f'http://localhost:5000/carrinho/adicionar-produto/{id}')
+        response.raise_for_status()
+        cart_add_product = response.json()
+        return jsonify(cart_add_product)
+
+    except requests.Timeout:
+        return jsonify({"error": "Request to the target API timed out"}), 500
+    except requests.RequestException as e:
+        return jsonify({"error": f"Request to the target API failed. {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/user/carrinho/rem/<string:id>', methods=['DELETE'])
+def remove_from_cart():
+    try:
+
+        response = requests.get(
+            f'http://localhost:5000/carrinho/remover-produto/{id}')
+        response.raise_for_status()
+        updated_list = response.json()
+        return jsonify(updated_list)
+
+    except requests.Timeout:
+        return jsonify({"error": "Request to the target API timed out"}), 500
+    except requests.RequestException as e:
+        return jsonify({"error": f"Request to the target API failed. {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 # TODO
-@app.route('/user/<string:name>/carrinho/product/<string:id>', methods=['GET'])
-def see_cart_product_detail(name, id):
-    pass
+@app.route('/user/initiate_payment', methods=['POST'])
+def start_payment():
+    try:
 
+        response = requests.get(
+            f'http://localhost:4000/carrinho/remover-produto/{id}')
+        response.raise_for_status()
+        updated_list = response.json()
+        return jsonify(updated_list)
 
-# TODO
-@app.route('/user/<string:name>/initiate_payment', methods=['POST'])
-def start_payment(name):
-    pass
+    except requests.Timeout:
+        return jsonify({"error": "Request to the target API timed out"}), 500
+    except requests.RequestException as e:
+        return jsonify({"error": f"Request to the target API failed. {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == '__main__':

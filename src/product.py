@@ -26,7 +26,7 @@ def get_products():
 def product_by_id(id):
     for product in data_pecas:
         if id == product['id']:
-            return jsonify(product['id'])
+            return jsonify(product)
     return jsonify({"e": "Produto Não Encontrado"}), 404
 
 
