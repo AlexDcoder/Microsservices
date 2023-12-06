@@ -29,4 +29,5 @@ def buscar_pedido(pedido_id):
         return jsonify({'mensagem': 'Pedido não encontrado'}), 404
 
 
-app.run(port=3000, host='localhost', debug=True)
+if __name__ == '__main__':
+    app.run(port=3000, host='localhost', debug=True)

@@ -28,4 +28,5 @@ def payment_status(transaction_id):
     return jsonify({"status": status}), 200
 
 
-app.run(port=4000, host='localhost', debug=True)
+if __name__ == '__main__':
+    app.run(port=4000, host='localhost', debug=True)

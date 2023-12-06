@@ -9,7 +9,7 @@ with open('pecas.json', encoding='utf-8') as pecas_file:
     data_pecas = json.load(pecas_file)
 
 
-@app.route('/produtos', methods=['GET'])
+@app.route('/products', methods=['GET'])
 def get_products():
     useful_stock = []
     for peca in data_pecas:
@@ -22,22 +22,22 @@ def get_products():
     return useful_stock
 
 
-@app.route('/produtos/<string:id>', methods=['GET'])
+@app.route('/products/<string:id>', methods=['GET'])
 def product_by_id(id):
     for product in data_pecas:
         if id == product['id']:
-            return product
-    return 'Produto Não Encontrado'
+            return jsonify(product['id'])
+    return jsonify({"e": "Produto Não Encontrado"}), 404
 
 
-@app.route('/produtos/adicionar-produto', methods=['POST'])
+@app.route('/products/add-product', methods=['POST'])
 def add_product():
     new_product = request.get_json()
     data_pecas.append(new_product)
     return jsonify(new_product)
 
 
-@app.route('/produtos/editar-produto/<string:id>', methods=['PUT'])
+@app.route('/products/edit-product<string:id>', methods=['PUT'])
 def edit_product(id):
     edited_product = request.get_json()
     for index, product in enumerate(data_pecas):
@@ -47,7 +47,7 @@ def edit_product(id):
     return 'Produto Não Encontrado'
 
 
-@app.route('/produtos/deletar-produto/<string:id>', methods=['DELETE'])
+@app.route('/products/delete-product/<string:id>', methods=['DELETE'])
 def delet_product(id):
     for index, product in enumerate(data_pecas):
         if product['quantidade_em_estoque'] <= 0:
@@ -61,4 +61,5 @@ def delet_product(id):
     return 'Não existe tal produto'
 
 
-app.run(port=2000, host='localhost', debug=True)
+if __name__ == '__main__':
+    app.run(port=2000, host='localhost', debug=True)

@@ -1,16 +1,14 @@
 from flask import Flask, jsonify, request
 import json
 import requests
-from pprint import pprint
+
 
 app = Flask(__name__)
-data_users = []
 data_pecas = []
 
 with open('pecas.json', encoding='utf-8') as pecas_file:
     data_pecas = json.load(pecas_file)
 
-pprint(data_pecas)
 added_products: list = []
 
 
@@ -21,7 +19,7 @@ def default_page():
 
 @app.route('/carrinho/adicionar-produto/<string:id>', methods=['POST'])
 def add_product(id):
-    new_product = request.get_json()
+    new_product = stock_response.get_json()
     added_products.append(new_product)
     return jsonify(new_product)
 
@@ -32,8 +30,8 @@ def remove_product():
         if id == product['id']:
             del data_pecas[index]
             return data_pecas[index]
+    return jsonify({"error": 'Não existe tal produto'})
 
-    return 'Não existe tal produto'
 
-
-app.run(port=5000, host='localhost', debug=True)
+if __name__ == '__main__':
+    app.run(port=5000, host='localhost', debug=True)
