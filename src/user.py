@@ -4,7 +4,6 @@ from flask import Flask, request, jsonify, request
 import json
 import requests
 import validate_credentials
-import asyncio
 
 
 app = Flask(__name__)
@@ -65,7 +64,7 @@ def see_product():
 # TODO
 
 
-@app.route('/user/product/detail/<string:id>', methods=['POST'])
+@app.route('/user/product/detail/<string:id>', methods=['GET'])
 def see_product_detail(id):
     try:
         response = requests.get(f'http://localhost:2000/products/{id}')
@@ -102,14 +101,26 @@ def see_cart():
 
 @app.route('/user/carrinho/product/<string:id>', methods=['GET'])
 def see_cart_product_detail(id):
-    pass
+    try:
+
+        response = requests.get(f'http://localhost:5000/carrinho/{id}')
+        response.raise_for_status()
+        cart = response.json()
+        return jsonify(cart)
+
+    except requests.Timeout:
+        return jsonify({"error": "Request to the target API timed out"}), 500
+    except requests.RequestException as e:
+        return jsonify({"error": f"Request to the target API failed. {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route('/user/carrinho/add/<string:id>', methods=['GET'])
 def add_to_cart(id):
     try:
 
-        response = requests.get(
+        response = requests.post(
             f'http://localhost:5000/carrinho/adicionar-produto/{id}')
         response.raise_for_status()
         cart_add_product = response.json()
@@ -123,15 +134,49 @@ def add_to_cart(id):
         return jsonify({"error": str(e)}), 500
 
 
-@app.route('/user/carrinho/rem/<string:id>', methods=['DELETE'])
-def remove_from_cart():
+@app.route('/user/carrinho/rem/<string:id>', methods=['GET'])
+def remove_from_cart(id):
     try:
 
-        response = requests.get(
+        response = requests.delete(
             f'http://localhost:5000/carrinho/remover-produto/{id}')
         response.raise_for_status()
         updated_list = response.json()
         return jsonify(updated_list)
+
+    except requests.Timeout:
+        return jsonify({"error": "Request to the target API timed out"}), 500
+    except requests.RequestException as e:
+        return jsonify({"error": f"Request to the target API failed. {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/user/pedido', methods=['GET'])
+def see_order():
+    try:
+
+        response = requests.get(f'http://localhost:3000/pedido')
+        response.raise_for_status()
+        order = response.json()
+        return jsonify(order)
+
+    except requests.Timeout:
+        return jsonify({"error": "Request to the target API timed out"}), 500
+    except requests.RequestException as e:
+        return jsonify({"error": f"Request to the target API failed. {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/user/pedido/<int:id>', methods=['GET'])
+def see_order_detail(id):
+    try:
+
+        response = requests.get(f'http://localhost:3000/pedido/{id}')
+        response.raise_for_status()
+        order = response.json()
+        return jsonify(order)
 
     except requests.Timeout:
         return jsonify({"error": "Request to the target API timed out"}), 500
@@ -146,11 +191,12 @@ def remove_from_cart():
 def start_payment():
     try:
 
-        response = requests.get(
-            f'http://localhost:4000/carrinho/remover-produto/{id}')
+        response = requests.post(
+            f'http://localhost:4000/initiate_payment')
+
         response.raise_for_status()
-        updated_list = response.json()
-        return jsonify(updated_list)
+
+        return jsonify(response.json())
 
     except requests.Timeout:
         return jsonify({"error": "Request to the target API timed out"}), 500

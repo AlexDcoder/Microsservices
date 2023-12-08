@@ -49,7 +49,7 @@ def add_product(id: str):
         return jsonify({"error": str(e)}), 500
 
 
-@app.route('/carrinho/remover-produto/<string:id>')
+@app.route('/carrinho/remover-produto/<string:id>', methods=['DELETE'])
 def remove_product(id):
     for index, product in enumerate(added_products):
         if id == product['id']:

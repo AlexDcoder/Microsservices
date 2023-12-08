@@ -13,12 +13,12 @@ def listar_pedidos():
     return jsonify(pedidos)
 
 
-@app.route('/pedido/add-carrinho/', methods=['POST'])
+@app.route('/pedido/add-carrinho', methods=['POST'])
 def adicionar_pedido():
     try:
         cart_response = requests.get('http://localhost:5000/carrinho')
         cart_response.raise_for_status()
-        if len(cart_response.json()) == 0:
+        if len(cart_response.json()) != 0:
             novo_pedido = cart_response.json()
             pedidos.append(novo_pedido)
             return novo_pedido
@@ -33,7 +33,7 @@ def adicionar_pedido():
 
 @app.route('/pedido/<int:pedido_id>', methods=['GET'])
 def buscar_pedido(pedido_id):
-    pedido = next((p for p in pedidos if p['id'] == pedido_id), None)
+    pedido = [p for id, p in enumerate(pedidos) if id == pedido_id]
     if pedido:
         return jsonify(pedido)
     else:

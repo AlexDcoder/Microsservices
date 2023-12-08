@@ -37,12 +37,12 @@ def add_product():
     return jsonify(new_product)
 
 
-@app.route('/products/edit-product<string:id>', methods=['PUT'])
+@app.route('/products/edit-product/<string:id>', methods=['PUT'])
 def edit_product(id):
     edited_product = request.get_json()
     for index, product in enumerate(data_pecas):
         if id == product['id']:
-            data_pecas.insert(index, edited_product)
+            data_pecas[index] = edited_product
             return jsonify(edited_product)
     return 'Produto Não Encontrado'
 

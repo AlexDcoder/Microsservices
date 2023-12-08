@@ -19,7 +19,7 @@ pagamento = [
 def initiate_payment():
     data = request.json
     response = payment_service.initiate_payment(data)
-    return jsonify(response), 200
+    return jsonify(response)
 
 
 @app.route('/payment_status/<transaction_id>', methods=['GET'])
