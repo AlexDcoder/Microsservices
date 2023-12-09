@@ -1,6 +1,7 @@
 from itertools import product
 import time
-from flask import Flask, request, jsonify, request
+from xmlrpc.client import ResponseError
+from flask import Flask, Request, Response, request, jsonify, request
 import json
 import requests
 import validate_credentials
@@ -172,7 +173,6 @@ def see_order():
 @app.route('/user/pedido/<int:id>', methods=['GET'])
 def see_order_detail(id):
     try:
-
         response = requests.get(f'http://localhost:3000/pedido/{id}')
         response.raise_for_status()
         order = response.json()
@@ -187,16 +187,17 @@ def see_order_detail(id):
 
 
 # TODO
-@app.route('/user/initiate_payment', methods=['POST'])
+@app.route('/initiate_payment', methods=['POST'])
 def start_payment():
     try:
+        response_first = requests.post(
+            f'http://localhost:4000/initiate_payment',
+        )
 
-        response = requests.post(
-            f'http://localhost:4000/initiate_payment')
+        response_first.raise_for_status()
 
-        response.raise_for_status()
-
-        return jsonify(response.json())
+        if response_first.status_code == 200:
+            return jsonify(response_first.json()), 200
 
     except requests.Timeout:
         return jsonify({"error": "Request to the target API timed out"}), 500
