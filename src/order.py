@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-import payment_service
 import requests
 import json
 
